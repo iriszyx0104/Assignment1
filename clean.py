@@ -19,4 +19,5 @@ if __name__ == '__main__':
     parser.add_argument('output_file', help='Cleaned data file (CSV)')
     args = parser.parse_args()
     cleaned = clean(args.contact_info_file, args.other_info_file)
+    print(cleaned.shape)
     cleaned.to_csv(args.output_file, index=False)
